@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: e454abc8b342f7547b7a89f747c2ee98
+guid: 4f4a45b612a793b45a0199cd75cf1a41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -453438725913153679
-    second: PlayerIdle-Sheet_0
-  - first:
-      213: -3158646997051175645
-    second: PlayerIdle-Sheet_1
+      213: 3033637170895929343
+    second: PlayerIdleBEHIND-Sheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,12 +126,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerIdle-Sheet_0
+      name: PlayerIdleBEHIND-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 16
+        width: 14
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,29 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17f6a8691ef05b9f0800000000000000
-      internalID: -453438725913153679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdle-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32d09e99a4b3a24d0800000000000000
-      internalID: -3158646997051175645
+      spriteID: fff3cac1fe4a91a20800000000000000
+      internalID: 3033637170895929343
       vertices: []
       indices: 
       edges: []
@@ -173,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d21200e78e708e044b5c3a5a3156bf62
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -181,8 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerIdle-Sheet_0: -453438725913153679
-      PlayerIdle-Sheet_1: -3158646997051175645
+      PlayerIdleBEHIND-Sheet_0: 3033637170895929343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

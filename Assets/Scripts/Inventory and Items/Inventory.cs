@@ -10,6 +10,13 @@ public class Inventory : MonoBehaviour
     public float selectHighlight = 1f;
     public float normalSize = 0.85f;
 
+    private void Start()
+    {
+        foreach (Image image in images)
+        {
+            image.rectTransform.localScale = new Vector2(normalSize, normalSize);
+        }
+    }
     private void Update()
     {
         if (Input.GetAxis("Mouse ScrollWheel") < 0)

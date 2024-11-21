@@ -81,6 +81,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Heal(int amount)
+    {
+        health += amount;
+        if(health > maxHealth)
+        {
+            health = maxHealth;
+        }
+    }
     private void LoseScreen()
     {
         SceneManager.LoadScene("LoseScreen");
