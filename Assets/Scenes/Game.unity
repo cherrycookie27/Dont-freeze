@@ -1790,7 +1790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016e42a3cf717124d9af80a394d227d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 184813787}
   anim: {fileID: 0}
+  speed: 5
 --- !u!61 &1963367391
 BoxCollider2D:
   m_ObjectHideFlags: 0
