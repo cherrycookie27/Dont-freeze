@@ -45,6 +45,10 @@ public class Player : MonoBehaviour
 
         rb.velocity = moveInput * activeMoveSpeed;
 
+        anim.SetFloat("Horizontal", moveInput.x);
+        anim.SetFloat("Vertical", moveInput.y);
+        anim.SetFloat("Speed", moveInput.magnitude);
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (dashCooldownCounter <= 0 && dashCounter <= 0)
