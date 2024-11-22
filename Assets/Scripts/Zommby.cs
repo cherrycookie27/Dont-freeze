@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Purchasing;
 using UnityEngine;
 
 public class Zommby : MonoBehaviour
@@ -9,15 +7,16 @@ public class Zommby : MonoBehaviour
     public GameObject player;
     public Animator anim;
     public float speed;
-    public float pushingForce;
 
     private bool pleaseStop;
     private bool isAttacking = false;
     private float distance;
-    
+
+
     private void Start()
     {
         anim = GetComponent<Animator>();
+        SetNewDestination();
     }
 
     private void FixedUpdate()
@@ -31,9 +30,9 @@ public class Zommby : MonoBehaviour
                 anim.SetBool("IsWalking", true);
         }
 
-        if (distance > 22)
+        if (distance > 22 /*&& got to the destination wanted*/)
         {
-                anim.SetBool("IsWalking", false);
+            SetNewDestination();
         }
 
         else
@@ -68,5 +67,10 @@ public class Zommby : MonoBehaviour
             player.TakeDamage(1);
             yield return new WaitForSeconds(2); 
         }
+    }
+
+    void SetNewDestination()
+    {
+        //create a waypoint for the enemy to go to
     }
 }

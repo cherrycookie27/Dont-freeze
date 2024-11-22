@@ -10,7 +10,9 @@ public class Food : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
+            //pick up and inform manager
         }
     }
+
+    //if item active in the inventory make it be able to be used
 }

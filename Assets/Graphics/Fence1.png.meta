@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 9fda62a732278c34caa7322df69a46d0
+guid: fc867878692200146bf1182b40c8198f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 678108639656822673
-    second: "S\xE4\xE4litt\xE4v\xE4ZIdle_0"
-  - first:
-      213: -33098556981560271
-    second: "S\xE4\xE4litt\xE4v\xE4ZIdle_1"
-  - first:
-      213: -5417918092493920084
-    second: "S\xE4\xE4litt\xE4v\xE4ZIdle_2"
+      213: 8268450233139531935
+    second: Fence1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -81,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -132,12 +126,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "S\xE4\xE4litt\xE4v\xE4ZIdle_0"
+      name: Fence1_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 10
+        width: 6
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,50 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1974ed90730296900800000000000000
-      internalID: 678108639656822673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "S\xE4\xE4litt\xE4v\xE4ZIdle_1"
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 0
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13c398ca9096a8ff0800000000000000
-      internalID: -33098556981560271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "S\xE4\xE4litt\xE4v\xE4ZIdle_2"
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 0
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca8ecb24330bfc4b0800000000000000
-      internalID: -5417918092493920084
+      spriteID: f90174dcdaf6fb270800000000000000
+      internalID: 8268450233139531935
       vertices: []
       indices: 
       edges: []
@@ -204,10 +156,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      "S\xE4\xE4litt\xE4v\xE4ZIdle_0": 678108639656822673
-      "S\xE4\xE4litt\xE4v\xE4ZIdle_1": -33098556981560271
-      "S\xE4\xE4litt\xE4v\xE4ZIdle_2": -5417918092493920084
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

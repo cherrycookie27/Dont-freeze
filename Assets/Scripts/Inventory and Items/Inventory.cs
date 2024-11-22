@@ -39,5 +39,7 @@ public class Inventory : MonoBehaviour
         }
 
         images[index].rectTransform.localScale = new Vector2(selectHighlight, selectHighlight);
+        //make the active image have a boolean for usage
     }
+    //put item pictures to right boxes (or managers jobs?)
 }

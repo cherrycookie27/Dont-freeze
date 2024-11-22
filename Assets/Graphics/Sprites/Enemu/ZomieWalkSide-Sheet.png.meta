@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 9fda62a732278c34caa7322df69a46d0
+guid: fca5ee72784d671428e022d0f3ed46e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 678108639656822673
-    second: "S\xE4\xE4litt\xE4v\xE4ZIdle_0"
+      213: 8187413732414185845
+    second: ZomieWalkSide-Sheet_0
   - first:
-      213: -33098556981560271
-    second: "S\xE4\xE4litt\xE4v\xE4ZIdle_1"
+      213: -5863462789060295776
+    second: ZomieWalkSide-Sheet_1
   - first:
-      213: -5417918092493920084
-    second: "S\xE4\xE4litt\xE4v\xE4ZIdle_2"
+      213: 4204587758592130207
+    second: ZomieWalkSide-Sheet_2
+  - first:
+      213: -2092541381983731321
+    second: ZomieWalkSide-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,12 +135,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "S\xE4\xE4litt\xE4v\xE4ZIdle_0"
+      name: ZomieWalkSide-Sheet_0
       rect:
         serializedVersion: 2
         x: 3
         y: 0
-        width: 10
+        width: 11
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,19 +149,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1974ed90730296900800000000000000
-      internalID: 678108639656822673
+      spriteID: 571e3bd29698f9170800000000000000
+      internalID: 8187413732414185845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "S\xE4\xE4litt\xE4v\xE4ZIdle_1"
+      name: ZomieWalkSide-Sheet_1
       rect:
         serializedVersion: 2
         x: 19
         y: 0
-        width: 10
+        width: 12
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -167,19 +170,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13c398ca9096a8ff0800000000000000
-      internalID: -33098556981560271
+      spriteID: 0a30758c8abc0aea0800000000000000
+      internalID: -5863462789060295776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "S\xE4\xE4litt\xE4v\xE4ZIdle_2"
+      name: ZomieWalkSide-Sheet_2
       rect:
         serializedVersion: 2
         x: 35
         y: 0
-        width: 10
+        width: 11
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -188,8 +191,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca8ecb24330bfc4b0800000000000000
-      internalID: -5417918092493920084
+      spriteID: f9cf6d12a42b95a30800000000000000
+      internalID: 4204587758592130207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomieWalkSide-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7810e0923bcc5f2e0800000000000000
+      internalID: -2092541381983731321
       vertices: []
       indices: 
       edges: []
@@ -205,9 +229,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "S\xE4\xE4litt\xE4v\xE4ZIdle_0": 678108639656822673
-      "S\xE4\xE4litt\xE4v\xE4ZIdle_1": -33098556981560271
-      "S\xE4\xE4litt\xE4v\xE4ZIdle_2": -5417918092493920084
+      ZomieWalkSide-Sheet_0: 8187413732414185845
+      ZomieWalkSide-Sheet_1: -5863462789060295776
+      ZomieWalkSide-Sheet_2: 4204587758592130207
+      ZomieWalkSide-Sheet_3: -2092541381983731321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
