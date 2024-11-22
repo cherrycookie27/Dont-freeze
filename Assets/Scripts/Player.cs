@@ -25,6 +25,10 @@ public class Player : MonoBehaviour
     private float dashCounter;
     private float dashCooldownCounter;
 
+    public List<Image> heartImages; 
+    public Sprite fullHeart;  
+    public Sprite emptyHeart;     
+
     void Start()
     {
         health = maxHealth;
@@ -32,8 +36,10 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         activeMoveSpeed = moveSpeed;
 
-        if(Instance == null)
+        if (Instance == null)
             Instance = this;
+
+        UpdateHearts();
     }
 
     private void Update()
@@ -74,28 +80,52 @@ public class Player : MonoBehaviour
             dashCooldownCounter -= Time.deltaTime;
         }
     }
+
     public void TakeDamage(int amount)
     {
         health -= amount;
-        if (health < 1)
+        if (health < 2)
         {
             anim.SetTrigger("IsDead");
-
             Invoke("LoseScreen", deathDelay);
         }
+
+        UpdateHearts();
     }
 
     public void Heal(int amount)
     {
         health += amount;
-        if(health > maxHealth)
+        if (health > maxHealth)
         {
             health = maxHealth;
         }
+
+        UpdateHearts(); 
     }
+
+    private void UpdateHearts()
+    {
+        for (int i = 0; i < heartImages.Count; i++)
+        {
+            if (i < health)
+            {
+                heartImages[i].sprite = fullHeart;
+            }
+            else
+            {
+                heartImages[i].sprite = emptyHeart;
+            }
+        }
+    }
+
     private void LoseScreen()
     {
         SceneManager.LoadScene("LoseScreen");
     }
 
+    public void Attack()
+    {
+        //Bob! Do something!
+    }
 }

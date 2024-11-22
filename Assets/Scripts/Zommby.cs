@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Purchasing;
 using UnityEngine;
 
 public class Zommby : MonoBehaviour
@@ -8,14 +9,14 @@ public class Zommby : MonoBehaviour
     public GameObject player;
     public Animator anim;
     public float speed;
+    public float pushingForce;
 
-    private Rigidbody2D rb;
+    private bool pleaseStop;
     private bool isAttacking = false;
     private float distance;
-
+    
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
@@ -24,7 +25,7 @@ public class Zommby : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
-        if (distance < 22)
+        if (distance < 22 && pleaseStop == false)
         {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
                 anim.SetBool("IsWalking", true);
@@ -46,6 +47,7 @@ public class Zommby : MonoBehaviour
         {
             isAttacking = true;
             StartCoroutine(Attack(other.gameObject.GetComponent<Player>()));
+            pleaseStop = true;
         }
     }
 
@@ -54,7 +56,8 @@ public class Zommby : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             isAttacking = false;
-            StopAllCoroutines(); 
+            StopAllCoroutines();
+            pleaseStop = false;
         }
     }
 
@@ -62,7 +65,7 @@ public class Zommby : MonoBehaviour
     {
         while (isAttacking)
         {
-            player.TakeDamage(1); 
+            player.TakeDamage(1);
             yield return new WaitForSeconds(2); 
         }
     }
