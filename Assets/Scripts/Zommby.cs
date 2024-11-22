@@ -27,17 +27,11 @@ public class Zommby : MonoBehaviour
         if (distance < 22 && pleaseStop == false)
         {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-                anim.SetBool("IsWalking", true);
         }
 
         if (distance > 22 /*&& got to the destination wanted*/)
         {
             SetNewDestination();
-        }
-
-        else
-        {
-            anim.SetBool("IsWalking", false);
         }
     }
     private void OnCollisionEnter2D(Collision2D other)

@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     int index = 0;
     public float selectHighlight = 1f;
     public float normalSize = 0.85f;
+    InventoryManager inventoryManager;
 
     private void Start()
     {
