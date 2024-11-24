@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 05a5d739ec2d2354183347613e3736ff
+guid: 6078ce142b1b4224ab507a87f191148e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 142135843227041086
-    second: AxeIdleSideL-Sheet_0
+      213: 8343157212208593210
+    second: SIDEZCHOMP_0
   - first:
-      213: 9046055111764602516
-    second: AxeIdleSideL-Sheet_1
+      213: 5387528140235527513
+    second: SIDEZCHOMP_1
+  - first:
+      213: 448335499246017846
+    second: SIDEZCHOMP_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,32 +103,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -142,12 +119,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AxeIdleSideL-Sheet_0
+      name: SIDEZCHOMP_0
       rect:
         serializedVersion: 2
         x: 3
         y: 0
-        width: 13
+        width: 12
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,19 +133,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3df56ddbc7f8f100800000000000000
-      internalID: 142135843227041086
+      spriteID: a397ee2d749d8c370800000000000000
+      internalID: 8343157212208593210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AxeIdleSideL-Sheet_1
+      name: SIDEZCHOMP_1
       rect:
         serializedVersion: 2
         x: 19
         y: 0
-        width: 13
+        width: 12
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -177,8 +154,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49ee553323b0a8d70800000000000000
-      internalID: 9046055111764602516
+      spriteID: 955d8289c4854ca40800000000000000
+      internalID: 5387528140235527513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIDEZCHOMP_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d91ccd2cec83600800000000000000
+      internalID: 448335499246017846
       vertices: []
       indices: 
       edges: []
@@ -193,9 +191,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      AxeIdleSideL-Sheet_0: 142135843227041086
-      AxeIdleSideL-Sheet_1: 9046055111764602516
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

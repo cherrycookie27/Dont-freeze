@@ -81,6 +81,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy") && Input.GetMouseButton(1))
+        {
+
+        }
+    }
     public void TakeDamage(int amount)
     {
         health -= amount;
@@ -126,6 +133,7 @@ public class Player : MonoBehaviour
 
     public void Attack()
     {
-        //Bob! Do something!
+        anim.SetTrigger("PlayerAttack");
+
     }
 }

@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 05a5d739ec2d2354183347613e3736ff
+guid: 46af3fb58a54fe6469b53ec8ffd3e639
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 142135843227041086
-    second: AxeIdleSideL-Sheet_0
+      213: 6782403272320420937
+    second: ZOMBIECHOMPFRONT_0
   - first:
-      213: 9046055111764602516
-    second: AxeIdleSideL-Sheet_1
+      213: -845228557319113314
+    second: ZOMBIECHOMPFRONT_1
+  - first:
+      213: -435033968134187861
+    second: ZOMBIECHOMPFRONT_2
+  - first:
+      213: 1827153072416410069
+    second: ZOMBIECHOMPFRONT_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,32 +106,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -142,12 +122,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AxeIdleSideL-Sheet_0
+      name: ZOMBIECHOMPFRONT_0
       rect:
         serializedVersion: 2
         x: 3
         y: 0
-        width: 13
+        width: 10
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,19 +136,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3df56ddbc7f8f100800000000000000
-      internalID: 142135843227041086
+      spriteID: 94c0b1a67dfef1e50800000000000000
+      internalID: 6782403272320420937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AxeIdleSideL-Sheet_1
+      name: ZOMBIECHOMPFRONT_1
       rect:
         serializedVersion: 2
         x: 19
         y: 0
-        width: 13
+        width: 10
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -177,8 +157,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49ee553323b0a8d70800000000000000
-      internalID: 9046055111764602516
+      spriteID: e957af6fa152544f0800000000000000
+      internalID: -845228557319113314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZOMBIECHOMPFRONT_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4122039e276f9f0800000000000000
+      internalID: -435033968134187861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZOMBIECHOMPFRONT_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9c4a7e90a5b5910800000000000000
+      internalID: 1827153072416410069
       vertices: []
       indices: 
       edges: []
@@ -193,9 +215,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      AxeIdleSideL-Sheet_0: 142135843227041086
-      AxeIdleSideL-Sheet_1: 9046055111764602516
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

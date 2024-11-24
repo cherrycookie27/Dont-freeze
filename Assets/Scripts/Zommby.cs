@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Zommby : MonoBehaviour
 {
+    public static Zommby instance;
+
+    [SerializeField] private float maxHealth = 3f;
+
     public GameObject player;
     public Animator anim;
     public float speed;
@@ -11,12 +15,15 @@ public class Zommby : MonoBehaviour
     private bool pleaseStop;
     private bool isAttacking = false;
     private float distance;
-
+    private float currentHealth;
 
     private void Start()
     {
+        currentHealth = maxHealth;
         anim = GetComponent<Animator>();
-        SetNewDestination();
+
+        if (instance == null)
+            instance = this;
     }
 
     private void FixedUpdate()
@@ -29,9 +36,9 @@ public class Zommby : MonoBehaviour
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
         }
 
-        if (distance > 22 /*&& got to the destination wanted*/)
+        if (distance > 22)
         {
-            SetNewDestination();
+
         }
     }
     private void OnCollisionEnter2D(Collision2D other)
@@ -61,10 +68,5 @@ public class Zommby : MonoBehaviour
             player.TakeDamage(1);
             yield return new WaitForSeconds(2); 
         }
-    }
-
-    void SetNewDestination()
-    {
-        //create a waypoint for the enemy to go to
     }
 }
