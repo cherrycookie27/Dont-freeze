@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 46af3fb58a54fe6469b53ec8ffd3e639
+guid: 5736e70f62883b042a3bb61f2b73e321
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6782403272320420937
-    second: ZOMBIECHOMPFRONT_0
-  - first:
-      213: -845228557319113314
-    second: ZOMBIECHOMPFRONT_1
-  - first:
-      213: -435033968134187861
-    second: ZOMBIECHOMPFRONT_2
-  - first:
-      213: 1827153072416410069
-    second: ZOMBIECHOMPFRONT_3
+      213: 8573186526196656270
+    second: HouseThreeRoof_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZOMBIECHOMPFRONT_0
+      name: HouseThreeRoof_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 10
-        height: 16
+        width: 105
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,71 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94c0b1a67dfef1e50800000000000000
-      internalID: 6782403272320420937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZOMBIECHOMPFRONT_1
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 0
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e957af6fa152544f0800000000000000
-      internalID: -845228557319113314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZOMBIECHOMPFRONT_2
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 0
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba4122039e276f9f0800000000000000
-      internalID: -435033968134187861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZOMBIECHOMPFRONT_3
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d9c4a7e90a5b5910800000000000000
-      internalID: 1827153072416410069
+      spriteID: e88ed1f09b31af670800000000000000
+      internalID: 8573186526196656270
       vertices: []
       indices: 
       edges: []
@@ -215,11 +143,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      ZOMBIECHOMPFRONT_0: 6782403272320420937
-      ZOMBIECHOMPFRONT_1: -845228557319113314
-      ZOMBIECHOMPFRONT_2: -435033968134187861
-      ZOMBIECHOMPFRONT_3: 1827153072416410069
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

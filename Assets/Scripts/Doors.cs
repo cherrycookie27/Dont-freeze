@@ -1,21 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Doors : MonoBehaviour
 {
-    public float zAngle;
-    private Transform door;
+    [SerializeField] Image Enterract;
+    [SerializeField] Image door;
+    [SerializeField] Image roof;
 
-    private void Start()
+    private void Awake()
     {
-        door = gameObject.transform;
+        Enterract.enabled = false;
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !Enterract.enabled)
         {
-            door.transform.Rotate(new Vector3(0, 0, zAngle), Space.Self);  
+            Enterract.enabled = true;
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                door.enabled = false;
+                roof.enabled = false;
+            }
+        }
+        else if (Enterract.enabled)
+        {
+            door.enabled = true;
+            roof.enabled = true;
         }
     }
 }

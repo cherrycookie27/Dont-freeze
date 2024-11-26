@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
     private float dashCounter;
     private float dashCooldownCounter;
 
+    private Zommby nearbyEnemy;
+
     public List<Image> heartImages; 
     public Sprite fullHeart;  
     public Sprite emptyHeart;     
@@ -79,15 +81,13 @@ public class Player : MonoBehaviour
         {
             dashCooldownCounter -= Time.deltaTime;
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Enemy") && Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1) && nearbyEnemy != null)
         {
-
+            Attack();
         }
     }
+
     public void TakeDamage(int amount)
     {
         health -= amount;
@@ -135,5 +135,9 @@ public class Player : MonoBehaviour
     {
         anim.SetTrigger("PlayerAttack");
 
+        if (nearbyEnemy != null)
+        {
+            nearbyEnemy.PlayerAttacking(1);
+        }
     }
 }
