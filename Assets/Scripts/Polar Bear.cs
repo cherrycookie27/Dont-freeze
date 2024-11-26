@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Zommby : MonoBehaviour
+public class PolarBear : MonoBehaviour
 {
-    public static Zommby instance;
-
-    public int maxHealth = 3;
+    public int maxHealth = 20;
 
     public GameObject player;
     public Animator anim;
 
     public float speed;
-    public int followDistance = 10;
 
     private bool pleaseStop;
     private bool isAttacking = false;
@@ -26,9 +24,6 @@ public class Zommby : MonoBehaviour
         currentHealth = maxHealth;
         anim = GetComponent<Animator>();
 
-        if (instance == null)
-            instance = this;
-
         lastDirection = Vector2.down;
     }
 
@@ -37,15 +32,15 @@ public class Zommby : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
-        if (distance < followDistance && !pleaseStop)
+        if (!pleaseStop)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             UpdateDirection(direction);
         }
 
-        if (distance > followDistance)
+        else
         {
-           
+            anim.SetBool("isMoving", false);
         }
     }
 
@@ -104,13 +99,14 @@ public class Zommby : MonoBehaviour
         if (currentHealth < 1)
         {
             pleaseStop = true;
-            anim.SetTrigger("zombieDying");
+            anim.SetTrigger("bearDying");
         }
     }
 
-    public void DestroyZombie()
+    IEnumerator DestroyBear()
     {
         Destroy(gameObject);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("WinScreen");
     }
 }
-
