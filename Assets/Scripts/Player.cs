@@ -88,6 +88,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            nearbyEnemy = other.GetComponentInParent<Zommby>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            if (nearbyEnemy == other.GetComponentInParent<Zommby>())
+            {
+                nearbyEnemy = null;
+            }
+        }
+    }
+
     public void TakeDamage(int amount)
     {
         health -= amount;
@@ -135,7 +154,7 @@ public class Player : MonoBehaviour
     {
         anim.SetTrigger("PlayerAttack");
 
-        if (nearbyEnemy != null)
+        if (nearbyEnemy = null)
         {
             nearbyEnemy.PlayerAttacking(1);
         }

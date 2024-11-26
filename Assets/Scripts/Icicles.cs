@@ -7,6 +7,9 @@ public class Icicles : MonoBehaviour
     float randChance = Random.value;
     private Animator anim;
     private Player player;
+    private AudioSource iciclefall;
+    Zommby zommby;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -24,11 +27,13 @@ public class Icicles : MonoBehaviour
             anim.SetTrigger("KYS");
             if (other.gameObject.CompareTag("Player"))
             {
+                iciclefall.Play();
                 player.TakeDamage(3);
             }
             else if (other.gameObject.CompareTag("Enemy"))
             {
-                //deal enemy damage
+                iciclefall.Play();
+                zommby.PlayerAttacking(3);
             }
         }
     }

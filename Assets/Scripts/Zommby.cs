@@ -14,7 +14,6 @@ public class Zommby : MonoBehaviour
     public float speed;
     public float deathDelay = 1f;
     public int followDistance = 10;
-    public bool playerInRange = false;
 
     private bool pleaseStop;
     private bool isAttacking = false;

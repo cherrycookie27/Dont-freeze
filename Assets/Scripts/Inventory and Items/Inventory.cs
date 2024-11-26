@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +8,6 @@ public class Inventory : MonoBehaviour
     int index = 0;
     public float selectHighlight = 1f;
     public float normalSize = 0.85f;
-    InventoryManager inventoryManager;
 
     private void Start()
     {
@@ -40,7 +38,5 @@ public class Inventory : MonoBehaviour
         }
 
         images[index].rectTransform.localScale = new Vector2(selectHighlight, selectHighlight);
-        //make the active image have a boolean for usage
     }
-    //put item pictures to right boxes (or managers jobs?)
 }
