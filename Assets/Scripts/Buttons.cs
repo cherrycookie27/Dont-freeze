@@ -13,7 +13,6 @@ public class Buttons : MonoBehaviour
     {
         Application.Quit();
     }
-
     public void Continue()
     {
         //IDONTKNOW

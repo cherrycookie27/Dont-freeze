@@ -33,7 +33,7 @@ public class Icicles : MonoBehaviour
             else if (other.gameObject.CompareTag("Enemy"))
             {
                 iciclefall.Play();
-                zommby.PlayerAttacking(3);
+                //zommby.PlayerAttacking(3);
             }
         }
     }

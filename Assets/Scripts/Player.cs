@@ -6,8 +6,15 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+
+    [SerializeField] AudioSource ouch;
+    [SerializeField] AudioSource dash;
+    [SerializeField] AudioSource attack;
+
     public static Player Instance;
     public Animator anim;
+    FreezingSlider slider;
 
     public float deathDelay = 1f;
     public int health;
@@ -25,6 +32,8 @@ public class Player : MonoBehaviour
     private float dashCounter;
     private float dashCooldownCounter;
 
+    private bool holdingAxe;
+
     private Zommby nearbyEnemy;
 
     public List<Image> heartImages; 
@@ -33,6 +42,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        slider = GameObject.FindFirstObjectByType<FreezingSlider>();
         health = maxHealth;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -63,6 +73,7 @@ public class Player : MonoBehaviour
             {
                 activeMoveSpeed = dashSpeed;
                 dashCounter = dashLenght;
+                dash.Play();
             }
         }
 
@@ -82,17 +93,31 @@ public class Player : MonoBehaviour
             dashCooldownCounter -= Time.deltaTime;
         }
 
-        if (Input.GetMouseButtonDown(1) && nearbyEnemy != null)
+        if (Input.GetMouseButtonDown(0) && nearbyEnemy != null)
         {
             Attack();
         }
+
+        if (Input.GetMouseButton(1))
+        {
+            Inventory.instance.Use();
+        }
     }
 
+    public void EqipAxe(bool b)
+    {
+        holdingAxe = b;
+        anim.SetBool("HasAxe", b);
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
             nearbyEnemy = other.GetComponentInParent<Zommby>();
+        }
+        if (other.GetComponent<IPickupable>() != null)
+        {
+            other.GetComponent<IPickupable>().PickUp();
         }
     }
 
@@ -109,8 +134,9 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        ouch.Play();
         health -= amount;
-        if (health < 2)
+        if (health < 1)
         {
             anim.SetTrigger("IsDead");
             Invoke("LoseScreen", deathDelay);
@@ -126,7 +152,7 @@ public class Player : MonoBehaviour
         {
             health = maxHealth;
         }
-
+        slider.Eating();
         UpdateHearts(); 
     }
 
@@ -153,10 +179,12 @@ public class Player : MonoBehaviour
     public void Attack()
     {
         anim.SetTrigger("PlayerAttack");
+        attack.Play();
 
-        if (nearbyEnemy = null)
+        if (nearbyEnemy != null)
         {
-            nearbyEnemy.PlayerAttacking(1);
+            Vector2 direction = nearbyEnemy.transform.position - transform.position;
+            nearbyEnemy.PlayerAttacking(1, direction);
         }
     }
 }
