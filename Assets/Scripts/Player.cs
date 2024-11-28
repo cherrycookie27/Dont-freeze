@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     public int maxHealth = 5;
 
     public float moveSpeed;
-    private Vector3 moveInput;
     Rigidbody2D rb;
 
     private float activeMoveSpeed;
@@ -38,8 +37,10 @@ public class Player : MonoBehaviour
 
     public List<Image> heartImages; 
     public Sprite fullHeart;  
-    public Sprite emptyHeart;     
+    public Sprite emptyHeart;
 
+    private Vector3 moveInput;
+    bool attackCD;
     void Start()
     {
         slider = GameObject.FindFirstObjectByType<FreezingSlider>();
@@ -152,7 +153,6 @@ public class Player : MonoBehaviour
         {
             health = maxHealth;
         }
-        slider.Eating();
         UpdateHearts(); 
     }
 
@@ -178,13 +178,32 @@ public class Player : MonoBehaviour
 
     public void Attack()
     {
-        anim.SetTrigger("PlayerAttack");
-        attack.Play();
+        if (attackCD) return;
 
-        if (nearbyEnemy != null)
+        if (holdingAxe)
         {
-            Vector2 direction = nearbyEnemy.transform.position - transform.position;
-            nearbyEnemy.PlayerAttacking(1, direction);
+            attackCD = true;
+            anim.SetTrigger("PlayerAttack");
+            attack.Play();
+            if (nearbyEnemy != null)
+            {
+                Vector2 direction = nearbyEnemy.transform.position - transform.position;
+                nearbyEnemy.PlayerAttacking(1, direction);
+            }
+            Invoke("Test", 0.5f);
         }
+        else
+        {
+            if (nearbyEnemy != null)
+            {
+                Vector2 direction = nearbyEnemy.transform.position - transform.position;
+                nearbyEnemy.PlayerAttacking(0, direction);
+            }
+        }
+    }
+    void Test()
+    {
+        anim.ResetTrigger("PlayerAttack");
+        attackCD = false;
     }
 }

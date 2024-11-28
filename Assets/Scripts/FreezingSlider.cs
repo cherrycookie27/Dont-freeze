@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class FreezingSlider : MonoBehaviour
 {
-    public static FreezingSlider instance;
     public Slider freexingSlider;
 
     public float maxValue = 80f;
     public float valuePerFoodCan = 10f;
-    public float freezingFromWater = 5f;
+    public float freezingFromWater = 10f;
 
     private float currentFreezeValue;
     private bool isFreezingActive = false;

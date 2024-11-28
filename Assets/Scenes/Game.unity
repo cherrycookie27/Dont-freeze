@@ -176,9 +176,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -12953768173943262, guid: ac2428ca3b5601a4d97b146a1074664f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -397,7 +397,7 @@ PrefabInstance:
     - target: {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: quantityText
       value: 
-      objectReference: {fileID: 120291366}
+      objectReference: {fileID: 0}
     - target: {fileID: 7454347257769400967, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: m_Name
       value: Image (6)
@@ -496,7 +496,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 487161132327147000, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       insertIndex: -1
@@ -511,17 +512,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
   m_PrefabInstance: {fileID: 120291364}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &120291366 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895763499784544556, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-  m_PrefabInstance: {fileID: 120291364}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &177321534
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +566,7 @@ GameObject:
   - component: {fileID: 184813795}
   - component: {fileID: 184813793}
   - component: {fileID: 184813794}
+  - component: {fileID: 184813799}
   - component: {fileID: 184813796}
   - component: {fileID: 184813797}
   - component: {fileID: 184813798}
@@ -1063,6 +1054,103 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &184813799
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184813787}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 41e24235ef356e8439c05fe6e8a87252, type: 3}
+  m_Resource: {fileID: 8300000, guid: 41e24235ef356e8439c05fe6e8a87252, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &188282472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1163,7 @@ GameObject:
   - component: {fileID: 188282475}
   - component: {fileID: 188282474}
   - component: {fileID: 188282473}
+  - component: {fileID: 188282477}
   m_Layer: 0
   m_Name: Polar Bear
   m_TagString: Untagged
@@ -1096,8 +1185,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   player: {fileID: 184813787}
-  anim: {fileID: 0}
-  speed: 8
+  anim: {fileID: 188282477}
+  minChargeCooldown: 3
+  maxChagrgeCooldown: 7
+  chargeSpeed: 16
+  speed: 6
+  maxChargeDistance: 10
 --- !u!70 &188282474
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1198,12 +1291,34 @@ Transform:
   m_GameObject: {fileID: 188282472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.73, y: -6.83, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 25.5, y: 7.5, z: 0}
+  m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &188282477
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188282472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &247298184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1609,7 @@ PrefabInstance:
     - target: {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: quantityText
       value: 
-      objectReference: {fileID: 292408056}
+      objectReference: {fileID: 0}
     - target: {fileID: 7454347257769400967, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: m_Name
       value: Image (3)
@@ -1593,7 +1708,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 487161132327147000, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       insertIndex: -1
@@ -1608,17 +1724,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
   m_PrefabInstance: {fileID: 292408054}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &292408056 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895763499784544556, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-  m_PrefabInstance: {fileID: 292408054}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &308870168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1801,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2971a3dfbbe3a1f44b0a4faa8b6a9c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUp: {fileID: 184813799}
+  jiggleAgressiveness: 0.25
+  jiggleSpeed: 1
   id: 2
 --- !u!212 &308870171
 SpriteRenderer:
@@ -1956,9 +2064,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -12953768173943262, guid: ac2428ca3b5601a4d97b146a1074664f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2393,6 +2501,7 @@ GameObject:
   - component: {fileID: 703725289}
   - component: {fileID: 703725288}
   - component: {fileID: 703725291}
+  - component: {fileID: 703725292}
   m_Layer: 0
   m_Name: Axe_0
   m_TagString: Untagged
@@ -2412,6 +2521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2971a3dfbbe3a1f44b0a4faa8b6a9c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUp: {fileID: 184813799}
+  jiggleAgressiveness: 0.25
+  jiggleSpeed: 1
   id: 3
 --- !u!212 &703725289
 SpriteRenderer:
@@ -2461,7 +2573,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.15, y: 0.17}
+  m_Size: {x: 0.17, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2521,13 +2633,35 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.15, y: 0.17}
-    newSize: {x: 0.15, y: 0.17}
+    newSize: {x: 0.17, y: 0.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 0.15, y: 0.17}
   m_EdgeRadius: 0
+--- !u!95 &703725292
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703725287}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a115c63fa24c5074791a2be22f817108, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &712423099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,9 +2923,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -12953768173943262, guid: ac2428ca3b5601a4d97b146a1074664f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2864,9 +2998,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -12953768173943262, guid: ac2428ca3b5601a4d97b146a1074664f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3065,6 +3199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2971a3dfbbe3a1f44b0a4faa8b6a9c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUp: {fileID: 184813799}
+  jiggleAgressiveness: 0.25
+  jiggleSpeed: 1
   id: 1
 --- !u!212 &934125503
 SpriteRenderer:
@@ -3186,7 +3323,7 @@ PrefabInstance:
     - target: {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: quantityText
       value: 
-      objectReference: {fileID: 940465522}
+      objectReference: {fileID: 0}
     - target: {fileID: 7454347257769400967, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: m_Name
       value: Image (1)
@@ -3285,7 +3422,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 487161132327147000, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       insertIndex: -1
@@ -3300,17 +3438,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
   m_PrefabInstance: {fileID: 940465520}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &940465522 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895763499784544556, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-  m_PrefabInstance: {fileID: 940465520}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &940465525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3323,6 +3450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e3efe678570814698f6f2a8d3140c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodCan: {fileID: 0}
+  waterBottle: {fileID: 0}
   id: 0
   spriteImage: {fileID: 0}
   data:
@@ -3461,9 +3590,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -12953768173943262, guid: ac2428ca3b5601a4d97b146a1074664f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3981,6 +4110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e3efe678570814698f6f2a8d3140c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodCan: {fileID: 0}
+  waterBottle: {fileID: 0}
   id: 0
   spriteImage: {fileID: 0}
   data:
@@ -4115,7 +4246,7 @@ PrefabInstance:
     - target: {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: quantityText
       value: 
-      objectReference: {fileID: 1243365985}
+      objectReference: {fileID: 0}
     - target: {fileID: 7454347257769400967, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: m_Name
       value: Image (2)
@@ -4214,7 +4345,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 487161132327147000, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       insertIndex: -1
@@ -4229,17 +4361,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
   m_PrefabInstance: {fileID: 1243365983}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1243365985 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895763499784544556, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-  m_PrefabInstance: {fileID: 1243365983}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1243365990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4252,6 +4373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e3efe678570814698f6f2a8d3140c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodCan: {fileID: 0}
+  waterBottle: {fileID: 0}
   id: 0
   spriteImage: {fileID: 0}
   data:
@@ -4868,7 +4991,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: -0.0011795333, y: -0.00714973}
-  m_Size: {x: 0.2341043, y: 0.35682365}
+  m_Size: {x: 0.30923218, y: 0.35682365}
   m_Direction: 0
 --- !u!1001 &1644216514
 PrefabInstance:
@@ -4921,7 +5044,7 @@ PrefabInstance:
     - target: {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: quantityText
       value: 
-      objectReference: {fileID: 1644216516}
+      objectReference: {fileID: 0}
     - target: {fileID: 7454347257769400967, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: m_Name
       value: Image (4)
@@ -5020,7 +5143,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 487161132327147000, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       insertIndex: -1
@@ -5035,17 +5159,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
   m_PrefabInstance: {fileID: 1644216514}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1644216516 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895763499784544556, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-  m_PrefabInstance: {fileID: 1644216514}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1842222648
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,9 +5216,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -12953768173943262, guid: ac2428ca3b5601a4d97b146a1074664f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5556,6 +5669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e3efe678570814698f6f2a8d3140c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodCan: {fileID: 0}
+  waterBottle: {fileID: 0}
   id: 0
   spriteImage: {fileID: 0}
   data:
@@ -5582,7 +5697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1963367390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5602,7 +5717,7 @@ MonoBehaviour:
   patrolRadius: 7
   speed: 3
   attackDistance: 3
-  followDistance: 10
+  followDistance: 15
 --- !u!212 &1963367392
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5729,7 +5844,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.00041513145, y: -0.004498899}
+  m_Offset: {x: 0.0004151333, y: -0.004498899}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5889,7 +6004,7 @@ PrefabInstance:
     - target: {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: quantityText
       value: 
-      objectReference: {fileID: 2001774108}
+      objectReference: {fileID: 0}
     - target: {fileID: 7454347257769400967, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: m_Name
       value: Image (5)
@@ -5988,7 +6103,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 487161132327147000, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       insertIndex: -1
@@ -6003,17 +6119,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
   m_PrefabInstance: {fileID: 2001774106}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2001774108 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895763499784544556, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-  m_PrefabInstance: {fileID: 2001774106}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2001774113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6026,6 +6131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e3efe678570814698f6f2a8d3140c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodCan: {fileID: 0}
+  waterBottle: {fileID: 0}
   id: 0
   spriteImage: {fileID: 0}
   data:
@@ -6124,6 +6231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e3efe678570814698f6f2a8d3140c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodCan: {fileID: 0}
+  waterBottle: {fileID: 0}
   id: 0
   spriteImage: {fileID: 0}
   data:
@@ -6316,7 +6425,7 @@ PrefabInstance:
     - target: {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: quantityText
       value: 
-      objectReference: {fileID: 656689617293608355}
+      objectReference: {fileID: 0}
     - target: {fileID: 7454347257769400967, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       propertyPath: m_Name
       value: Image
@@ -6415,7 +6524,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4998685112526428956, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 487161132327147000, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
       insertIndex: -1
@@ -6430,17 +6540,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7638505819010179191, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
   m_PrefabInstance: {fileID: 656689617293608352}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &656689617293608355 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895763499784544556, guid: c5991da0454802e458e8ccc2fb65953e, type: 3}
-  m_PrefabInstance: {fileID: 656689617293608352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &656689617293608358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6453,6 +6552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e3efe678570814698f6f2a8d3140c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodCan: {fileID: 0}
+  waterBottle: {fileID: 0}
   id: 0
   spriteImage: {fileID: 0}
   data:

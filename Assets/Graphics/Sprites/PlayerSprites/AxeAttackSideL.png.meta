@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 3824cebbc58131d409714175951b1763
+guid: 06a41d9803a0d2b42bc03a39af83f201
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8957215925905386175
-    second: EbuttonW_0
+      213: 8735555144171324346
+    second: AxeAttackSideL_0
+  - first:
+      213: -1658956409868268492
+    second: AxeAttackSideL_1
+  - first:
+      213: 3962812591856638069
+    second: AxeAttackSideL_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,19 +103,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,12 +132,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EbuttonW_0
+      name: AxeAttackSideL_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 16
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,8 +146,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14510ff929391b380800000000000000
-      internalID: -8957215925905386175
+      spriteID: ab30b24ee1dea3970800000000000000
+      internalID: 8735555144171324346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeAttackSideL_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43cc1fb4fe33af8e0800000000000000
+      internalID: -1658956409868268492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeAttackSideL_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5785f017e0dbef630800000000000000
+      internalID: 3962812591856638069
       vertices: []
       indices: 
       edges: []
@@ -170,7 +205,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EbuttonW_0: -8957215925905386175
+      AxeAttackSideL_0: 8735555144171324346
+      AxeAttackSideL_1: -1658956409868268492
+      AxeAttackSideL_2: 3962812591856638069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,6 +12,10 @@ public struct itemData
 }
 public class InventorySlot : MonoBehaviour
 {
+    [SerializeField] AudioSource foodCan;
+    [SerializeField] AudioSource waterBottle;
+
+    FreezingSlider slider;
     Player player;
     public int id;
     public Image spriteImage;
@@ -19,6 +23,7 @@ public class InventorySlot : MonoBehaviour
 
     private void Awake()
     {
+        slider = GameObject.FindFirstObjectByType<FreezingSlider>();
         player = GameObject.FindFirstObjectByType<Player>();
         spriteImage = transform.Find("IconImage").GetComponent<Image>();
         spriteImage.gameObject.SetActive(false);
@@ -43,13 +48,15 @@ public class InventorySlot : MonoBehaviour
                 break;
             case 1:
                 player.Heal(2);
+                slider.Eating();
                 Clear();
                 break;
             case 2:
-                
+                slider.Drinking();
+                Clear();
                 break;
             case 3:
-
+                //axe
                 break;
         }
     }

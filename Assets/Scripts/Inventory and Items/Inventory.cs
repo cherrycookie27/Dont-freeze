@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             if (previousSlot != null)
             {
@@ -43,7 +43,7 @@ public class Inventory : MonoBehaviour
             player.EqipAxe(slots[index].id == 3);
             
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if (previousSlot != null)
             {

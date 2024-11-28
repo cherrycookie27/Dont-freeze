@@ -65,7 +65,7 @@ public class Zommby : MonoBehaviour
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             UpdateDirection(direction);
             following = true;
-            if (distance < attackDistance)
+            if (distance < attackDistance && !isAttacking)
             {
                 StartCoroutine(Attack(player.GetComponent<Player>()));
                 isAttacking = true;
@@ -126,16 +126,6 @@ public class Zommby : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        //if (other.gameObject.CompareTag("Player") && !isAttacking)
-        //{
-        //    isAttacking = true;
-        //    StartCoroutine(Attack(other.gameObject.GetComponent<Player>()));
-        //    pleaseStop = true;
-        //}
-    }
-
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -151,7 +141,7 @@ public class Zommby : MonoBehaviour
         anim.SetFloat("LastVertical", lastDirection.y);
         player.TakeDamage(1);
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         isAttacking = false;
         pleaseStop = false;
     }
