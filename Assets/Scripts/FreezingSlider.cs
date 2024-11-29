@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FreezingSlider : MonoBehaviour
 {
+    public static FreezingSlider instance;
     public Slider freexingSlider;
 
     public float maxValue = 80f;
@@ -13,7 +14,7 @@ public class FreezingSlider : MonoBehaviour
 
     private float currentFreezeValue;
     private bool isFreezingActive = false;
-
+    public bool inside; 
     private void Start()
     {
         currentFreezeValue = maxValue;
@@ -22,7 +23,12 @@ public class FreezingSlider : MonoBehaviour
 
     private void Update()
     {
-        if (currentFreezeValue > 0)
+        if (currentFreezeValue > 0 && inside)
+        {
+            currentFreezeValue += Time.deltaTime;
+            UpdateSlider();
+        }
+        else if (currentFreezeValue > 0)
         {
             currentFreezeValue -= Time.deltaTime;
             UpdateSlider();
@@ -71,5 +77,10 @@ public class FreezingSlider : MonoBehaviour
             Freezing();
         }
         Player.Instance.Heal(1);
+    }
+
+    public void Inside()
+    {
+
     }
 }

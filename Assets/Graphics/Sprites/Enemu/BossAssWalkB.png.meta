@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 648f992936b8100488f5a0aec646d2f8
+guid: 6416cb8a7701dc840a11fbe18b75346d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4115291574403197500
-    second: HouseTwoBack_0
+      213: -5308544925436543131
+    second: BossAssWalkB_0
+  - first:
+      213: 645684139701123731
+    second: BossAssWalkB_1
+  - first:
+      213: -2313588286835905201
+    second: BossAssWalkB_2
+  - first:
+      213: -547849528780711206
+    second: BossAssWalkB_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -126,22 +135,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HouseTwoBack_0
+      name: BossAssWalkB_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 68
-        height: 83
+        width: 24
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3ae57712e37c1930800000000000000
-      internalID: 4115291574403197500
+      spriteID: 56ff62524824456b0800000000000000
+      internalID: -5308544925436543131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossAssWalkB_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a3df7dd4ee5f800800000000000000
+      internalID: 645684139701123731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossAssWalkB_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d24a606bb74efd0800000000000000
+      internalID: -2313588286835905201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossAssWalkB_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada19a691c5a568f0800000000000000
+      internalID: -547849528780711206
       vertices: []
       indices: 
       edges: []
@@ -149,15 +221,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2512d2819d963e94687a5b7f0517b37c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      HouseTwoBack_0: 4115291574403197500
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

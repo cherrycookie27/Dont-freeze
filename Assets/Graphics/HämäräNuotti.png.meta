@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "H\xE4m\xE4r\xE4Nuotti_0": 6507801312940482468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

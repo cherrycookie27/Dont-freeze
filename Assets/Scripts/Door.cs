@@ -40,7 +40,9 @@ public class Door : MonoBehaviour
         {
              door.SetActive(true);
              roof.SetActive(true);
-
+             Color c = Color.white;
+             c.a = 1f;
+             frontWall.GetComponent<SpriteRenderer>().color = c;
         }
     }
 

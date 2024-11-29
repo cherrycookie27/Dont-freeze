@@ -204,7 +204,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AXEATTACKF_0: -8249083754388226423
+      AXEATTACKF_1: 2143864642517242083
+      AXEATTACKF_2: 3274643135384963948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

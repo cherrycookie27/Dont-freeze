@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IcicleTwo_0: 2254261535981437960
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

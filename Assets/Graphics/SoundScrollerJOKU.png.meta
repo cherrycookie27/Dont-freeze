@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SoundScrollerJOKU_0: 907464254301758874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
