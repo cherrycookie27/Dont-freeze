@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IPickupable
 {
-    [SerializeField] AudioSource pickUp;
     public float jiggleAgressiveness = 0.25f;
     public float jiggleSpeed = 1f;
 
@@ -37,7 +36,7 @@ public class Item : MonoBehaviour, IPickupable
         bool b = Inventory.instance.PickUp(id);
         if (b)
         {
-            pickUp.Play();
+            //SoundManager.instance.PlaySFX("PickUp");
             Destroy(gameObject);
         }
     }

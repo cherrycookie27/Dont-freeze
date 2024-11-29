@@ -11,7 +11,6 @@ public class Zommby : MonoBehaviour
     public GameObject player;
     public Animator anim;
 
-    [SerializeField] AudioSource ouch;
     public float patrolRadius;
     public float speed;
     public float attackDistance;
@@ -140,6 +139,7 @@ public class Zommby : MonoBehaviour
         anim.SetFloat("LastHorizontal", lastDirection.x);
         anim.SetFloat("LastVertical", lastDirection.y);
         player.TakeDamage(1);
+        //SoundManager.instance.PlaySFX("ZombieBite");
 
         yield return new WaitForSeconds(2);
         isAttacking = false;
@@ -149,7 +149,7 @@ public class Zommby : MonoBehaviour
     public void PlayerAttacking(int amount, Vector2 dir)
     {
         currentHealth -= amount;
-        ouch.Play();
+        //SoundManager.instance.PlaySFX("ZombieHit");
         knockBackTarget = dir.normalized * 4 + (Vector2)transform.position;
         knockBack = true;
         if (currentHealth < 1)

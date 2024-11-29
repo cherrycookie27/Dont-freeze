@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 9e951fe6d79e18d44b160bddafdd8c11
+guid: f038895c4626de54b873a2341546ce7a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4593004947827503088
-    second: HouseOneRoof_0
+      213: 8063732791903085905
+    second: DEATHHHHHHHH_0
+  - first:
+      213: 5114460840659325803
+    second: DEATHHHHHHHH_1
+  - first:
+      213: 2012500797343242487
+    second: DEATHHHHHHHH_2
+  - first:
+      213: -5212536926761707364
+    second: DEATHHHHHHHH_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,19 +106,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,22 +135,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HouseOneRoof_0
+      name: DEATHHHHHHHH_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 72
-        height: 85
+        width: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0105121b55e5240c0800000000000000
-      internalID: -4593004947827503088
+      spriteID: 1556d01304228ef60800000000000000
+      internalID: 8063732791903085905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATHHHHHHHH_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63152979073af640800000000000000
+      internalID: 5114460840659325803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATHHHHHHHH_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f895dfffc6ddeb10800000000000000
+      internalID: 2012500797343242487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATHHHHHHHH_3
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9813c5484959a7b0800000000000000
+      internalID: -5212536926761707364
       vertices: []
       indices: 
       edges: []
@@ -162,15 +221,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cfe3685b6a5422d4bb4928e4048178db
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      HouseOneRoof_0: -4593004947827503088
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -49,11 +49,13 @@ public class InventorySlot : MonoBehaviour
             case 1:
                 player.Heal(2);
                 slider.Eating();
+                //SoundManager.instance.PlaySFX("FoodCan");
                 Clear();
                 break;
             case 2:
                 slider.Drinking();
                 Clear();
+                //SoundManager.instance.PlaySFX("WaterBottle");
                 break;
             case 3:
                 //axe

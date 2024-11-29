@@ -13,12 +13,10 @@ public class Buttons : MonoBehaviour
     {
         Application.Quit();
     }
-    public void Continue()
-    {
-        //IDONTKNOW
-    }
-    public void GameNew()
+    public void Game()
     {
         SceneManager.LoadScene("Game");
+        //SoundManager.instance.musicSource.Stop();
+        //SoundManager.instance.PlayMusic("Game");
     }
 }

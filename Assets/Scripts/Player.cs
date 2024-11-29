@@ -6,12 +6,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public static Player instance;
-
-    [SerializeField] AudioSource ouch;
-    [SerializeField] AudioSource dash;
-    [SerializeField] AudioSource attack;
-
     public static Player Instance;
     public Animator anim;
     FreezingSlider slider;
@@ -74,7 +68,7 @@ public class Player : MonoBehaviour
             {
                 activeMoveSpeed = dashSpeed;
                 dashCounter = dashLenght;
-                dash.Play();
+                //SoundManager.instance.PlaySFX("PlayerDash");
             }
         }
 
@@ -135,7 +129,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        ouch.Play();
+        //SoundManager.instance.PlaySFX("PlayerHit");
         health -= amount;
         if (health < 1)
         {
@@ -184,7 +178,7 @@ public class Player : MonoBehaviour
         {
             attackCD = true;
             anim.SetTrigger("PlayerAttack");
-            attack.Play();
+            //SoundManager.instance.PlaySFX("PlayerAttack");
             if (nearbyEnemy != null)
             {
                 Vector2 direction = nearbyEnemy.transform.position - transform.position;
