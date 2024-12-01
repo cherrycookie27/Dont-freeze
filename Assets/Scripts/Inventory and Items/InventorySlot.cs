@@ -12,9 +12,6 @@ public struct itemData
 }
 public class InventorySlot : MonoBehaviour
 {
-    [SerializeField] AudioSource foodCan;
-    [SerializeField] AudioSource waterBottle;
-
     FreezingSlider slider;
     Player player;
     public int id;
@@ -49,13 +46,13 @@ public class InventorySlot : MonoBehaviour
             case 1:
                 player.Heal(2);
                 slider.Eating();
-                //SoundManager.instance.PlaySFX("FoodCan");
+                AudioManager.instance.PlaySFX("FoodCan");
                 Clear();
                 break;
             case 2:
                 slider.Drinking();
                 Clear();
-                //SoundManager.instance.PlaySFX("WaterBottle");
+                AudioManager.instance.PlaySFX("WaterBottle");
                 break;
             case 3:
                 //axe

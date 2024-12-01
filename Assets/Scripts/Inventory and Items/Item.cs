@@ -36,7 +36,7 @@ public class Item : MonoBehaviour, IPickupable
         bool b = Inventory.instance.PickUp(id);
         if (b)
         {
-            //SoundManager.instance.PlaySFX("PickUp");
+            AudioManager.instance.PlaySFX("PickUp");
             Destroy(gameObject);
         }
     }

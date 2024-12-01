@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zommby : MonoBehaviour
+public class Zommby : MonoBehaviour, IEnemy
 {
     public static Zommby instance;
-
+    public Transform Transform => this.transform;
     public int maxHealth = 3;
 
     public GameObject player;
@@ -139,7 +139,7 @@ public class Zommby : MonoBehaviour
         anim.SetFloat("LastHorizontal", lastDirection.x);
         anim.SetFloat("LastVertical", lastDirection.y);
         player.TakeDamage(1);
-        //SoundManager.instance.PlaySFX("ZombieBite");
+        AudioManager.instance.PlaySFX("ZombieAttack");
 
         yield return new WaitForSeconds(2);
         isAttacking = false;
@@ -149,19 +149,13 @@ public class Zommby : MonoBehaviour
     public void PlayerAttacking(int amount, Vector2 dir)
     {
         currentHealth -= amount;
-        //SoundManager.instance.PlaySFX("ZombieHit");
+        AudioManager.instance.PlaySFX("ZombieHit");
         knockBackTarget = dir.normalized * 4 + (Vector2)transform.position;
         knockBack = true;
         if (currentHealth < 1)
         {
-            pleaseStop = true;
-            anim.SetTrigger("zombieDying");
+            Destroy(gameObject);
         }
-    }
-
-    public void DestroyZombie()
-    {
-        Destroy(gameObject);
     }
 }
 

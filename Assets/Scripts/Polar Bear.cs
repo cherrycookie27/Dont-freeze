@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PolarBear : MonoBehaviour
+public class PolarBear : MonoBehaviour, IEnemy
 {
     public int maxHealth = 20;
+    public Transform Transform => this.transform;
 
     public GameObject player;
     public Animator anim;
@@ -15,7 +16,9 @@ public class PolarBear : MonoBehaviour
     public float chargeSpeed;
     public float speed;
     public float maxChargeDistance = 5f;
+    public float attackDistance;
 
+    private bool knockBack;
     private bool isCharging;
     private bool pleaseStop;
     private bool isAttacking = false;
@@ -23,6 +26,7 @@ public class PolarBear : MonoBehaviour
     private float nectChargeTime;
     private int currentHealth;
 
+    private Vector2 knockBackTarget;
     private Vector2 lastDirection;
     private Vector2 chargeTarget;
     private Vector2 chargeStartPosition;
@@ -40,31 +44,49 @@ public class PolarBear : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
-        if (!pleaseStop)
+        if (knockBack)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            UpdateDirection(direction);
-            if (Time.time >= nectChargeTime)
+            transform.position = Vector2.Lerp(transform.position, knockBackTarget, 1f * Time.fixedDeltaTime);
+            if (Vector2.Distance(transform.position, knockBackTarget) < 1)
             {
-                StartCoroutine(StartCharge());
-            }
-        }
-
-        if (isCharging)
-        {
-            // Charging toward the player's last known position
-            transform.position = Vector2.MoveTowards(transform.position, chargeTarget, chargeSpeed * Time.deltaTime);
-            if (Vector2.Distance(chargeStartPosition, transform.position) >= maxChargeDistance || Vector2.Distance(transform.position, chargeTarget) < 0.5f)
-            {
-                isCharging = false;
+                knockBack = false;
                 pleaseStop = false;
             }
-            return;
         }
-
-        else
+        if (BossFight.Instance.canMove)
         {
-            anim.SetBool("isMoving", false);
+            if (!pleaseStop)
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+                UpdateDirection(direction);
+                if (Time.time >= nectChargeTime)
+                {
+                    StartCoroutine(StartCharge());
+                }
+                if (distance < attackDistance && !isAttacking)
+                {
+                    StartCoroutine(Attack(player.GetComponent<Player>()));
+                    isAttacking = true;
+                    pleaseStop = true;
+                }
+            }
+
+            if (isCharging)
+            {
+                // Charging toward the player's last known position
+                transform.position = Vector2.MoveTowards(transform.position, chargeTarget, chargeSpeed * Time.deltaTime);
+                if (Vector2.Distance(chargeStartPosition, transform.position) >= maxChargeDistance || Vector2.Distance(transform.position, chargeTarget) < 0.5f)
+                {
+                    isCharging = false;
+                    pleaseStop = false;
+                }
+                return;
+            }
+
+            else
+            {
+                anim.SetBool("isMoving", false);
+            }
         }
     }
 
@@ -84,22 +106,10 @@ public class PolarBear : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player") && !isAttacking)
-        {
-            isAttacking = true;
-            StartCoroutine(Attack(other.gameObject.GetComponent<Player>()));
-            pleaseStop = true;
-        }
-    }
-
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            isAttacking = false;
-            StopAllCoroutines();
             pleaseStop = false;
         }
     }
@@ -111,21 +121,19 @@ public class PolarBear : MonoBehaviour
 
     IEnumerator Attack(Player player)
     {
-        while (isAttacking)
-        {
-            anim.SetTrigger("EnemyAttack");
-            anim.SetFloat("LastHorizontal", lastDirection.x);
-            anim.SetFloat("LastVertical", lastDirection.y);
-            player.TakeDamage(1);
+          anim.SetTrigger("EnemyAttack");
+          anim.SetFloat("LastHorizontal", lastDirection.x);
+          anim.SetFloat("LastVertical", lastDirection.y);
+          player.TakeDamage(1);
 
-            yield return new WaitForSeconds(3);
-        }
+          yield return new WaitForSeconds(3);
+          isAttacking = false;
+        pleaseStop = false;
     }
 
     IEnumerator StartCharge()
     {
         pleaseStop = true;
-        anim.SetTrigger("prepareForCharge");
 
         yield return new WaitForSeconds(1.5f);
 
@@ -134,14 +142,15 @@ public class PolarBear : MonoBehaviour
         chargeStartPosition = transform.position;
         chargeTarget = player.transform.position;
         isCharging = true;
-        anim.SetTrigger("charge");
 
         ScheduleNextCharge();
     }
 
-    public void PlayerAttacking(int amount)
+    public void PlayerAttacking(int amount, Vector2 dir)
     {
         currentHealth -= amount;
+        knockBackTarget = dir.normalized * 4 + (Vector2)transform.position;
+        knockBack = true;
         if (currentHealth < 1)
         {
             pleaseStop = true;
@@ -151,8 +160,11 @@ public class PolarBear : MonoBehaviour
 
     IEnumerator DestroyBear()
     {
-        Destroy(gameObject);
+        AudioManager.instance.musicSource.Stop();
+
         yield return new WaitForSeconds(2f);
+
         SceneManager.LoadScene("WinScreen");
+        AudioManager.instance.PlayMusic("Win");
     }
 }

@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 using UnityEngine.UI;
-
 public class Player : MonoBehaviour
 {
     public static Player Instance;
@@ -27,10 +25,10 @@ public class Player : MonoBehaviour
 
     private bool holdingAxe;
 
-    private Zommby nearbyEnemy;
+    private IEnemy nearbyEnemy;
 
-    public List<Image> heartImages; 
-    public Sprite fullHeart;  
+    public List<Image> heartImages;
+    public Sprite fullHeart;
     public Sprite emptyHeart;
 
     private Vector3 moveInput;
@@ -68,7 +66,7 @@ public class Player : MonoBehaviour
             {
                 activeMoveSpeed = dashSpeed;
                 dashCounter = dashLenght;
-                //SoundManager.instance.PlaySFX("PlayerDash");
+                AudioManager.instance.PlaySFX("PlayerDash");
             }
         }
 
@@ -108,7 +106,7 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            nearbyEnemy = other.GetComponentInParent<Zommby>();
+            nearbyEnemy = other.GetComponentInParent<IEnemy>();
         }
         if (other.GetComponent<IPickupable>() != null)
         {
@@ -120,7 +118,7 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            if (nearbyEnemy == other.GetComponentInParent<Zommby>())
+            if (nearbyEnemy == other.GetComponentInParent<IEnemy>())
             {
                 nearbyEnemy = null;
             }
@@ -129,12 +127,12 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        //SoundManager.instance.PlaySFX("PlayerHit");
+        AudioManager.instance.PlaySFX("PlayerHit");
         health -= amount;
         if (health < 1)
         {
             anim.SetTrigger("IsDead");
-            Invoke("LoseScreen", deathDelay);
+            AudioManager.instance.musicSource.Stop();
         }
 
         UpdateHearts();
@@ -147,7 +145,7 @@ public class Player : MonoBehaviour
         {
             health = maxHealth;
         }
-        UpdateHearts(); 
+        UpdateHearts();
     }
 
     private void UpdateHearts()
@@ -165,9 +163,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void LoseScreen()
+    private void Dying()
     {
         SceneManager.LoadScene("LoseScreen");
+        AudioManager.instance.PlayMusic("Lose");
     }
 
     public void Attack()
@@ -178,10 +177,10 @@ public class Player : MonoBehaviour
         {
             attackCD = true;
             anim.SetTrigger("PlayerAttack");
-            //SoundManager.instance.PlaySFX("PlayerAttack");
+            AudioManager.instance.PlaySFX("PlayerAttack");
             if (nearbyEnemy != null)
             {
-                Vector2 direction = nearbyEnemy.transform.position - transform.position;
+                Vector2 direction = nearbyEnemy.Transform.position - transform.position; // Use the IEnemy's Transform
                 nearbyEnemy.PlayerAttacking(1, direction);
             }
             Invoke("Test", 0.5f);
@@ -190,8 +189,8 @@ public class Player : MonoBehaviour
         {
             if (nearbyEnemy != null)
             {
-                Vector2 direction = nearbyEnemy.transform.position - transform.position;
-                nearbyEnemy.PlayerAttacking(0, direction);
+                Vector2 direction = nearbyEnemy.Transform.position - transform.position; // Use the IEnemy's Transform
+                nearbyEnemy.PlayerAttacking(1, direction);
             }
         }
     }

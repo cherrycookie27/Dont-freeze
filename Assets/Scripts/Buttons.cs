@@ -16,7 +16,7 @@ public class Buttons : MonoBehaviour
     public void Game()
     {
         SceneManager.LoadScene("Game");
-        //SoundManager.instance.musicSource.Stop();
-        //SoundManager.instance.PlayMusic("Game");
+        AudioManager.instance.musicSource.Stop();
+        AudioManager.instance.PlayMusic("Game");
     }
 }

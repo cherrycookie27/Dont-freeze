@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: bca6590f583fea54dbb365e18262b664
+guid: 41df1e45df426824790cc00589f6d776
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8289055778358207677
-    second: BossWalkL_0
+      213: -561107766783046890
+    second: BossAttackBSendHelp_0
   - first:
-      213: -8040031571616128454
-    second: BossWalkL_1
+      213: -8784578948928660305
+    second: BossAttackBSendHelp_1
   - first:
-      213: -5966244897639539507
-    second: BossWalkL_2
+      213: -1336634710604474849
+    second: BossAttackBSendHelp_2
   - first:
-      213: 526577709187367946
-    second: BossWalkL_3
+      213: -1110059602962194974
+    second: BossAttackBSendHelp_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,32 +106,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -148,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BossWalkL_0
+      name: BossAttackBSendHelp_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 59
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db4a0782054a80370800000000000000
-      internalID: 8289055778358207677
+      spriteID: 61b0f20857b8638f0800000000000000
+      internalID: -561107766783046890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossWalkL_1
+      name: BossAttackBSendHelp_1
       rect:
         serializedVersion: 2
-        x: 66
+        x: 32
         y: 0
-        width: 59
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3225ee22e11c6090800000000000000
-      internalID: -8040031571616128454
+      spriteID: fac9bb71df7e61680800000000000000
+      internalID: -8784578948928660305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossWalkL_2
+      name: BossAttackBSendHelp_2
       rect:
         serializedVersion: 2
-        x: 130
+        x: 64
         y: 0
-        width: 59
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dcc553940e3a33da0800000000000000
-      internalID: -5966244897639539507
+      spriteID: f1696ffffc1537de0800000000000000
+      internalID: -1336634710604474849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossWalkL_3
+      name: BossAttackBSendHelp_3
       rect:
         serializedVersion: 2
-        x: 194
+        x: 96
         y: 0
-        width: 59
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,8 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0480c6f2a7ce4700800000000000000
-      internalID: 526577709187367946
+      spriteID: 2ed5de52ca64890f0800000000000000
+      internalID: -1110059602962194974
       vertices: []
       indices: 
       edges: []
@@ -234,7 +208,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c75442f5f224ee04e8866ddb80824c15
     internalID: 0
     vertices: []
     indices: 
@@ -242,10 +216,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BossWalkL_0: 8289055778358207677
-      BossWalkL_1: -8040031571616128454
-      BossWalkL_2: -5966244897639539507
-      BossWalkL_3: 526577709187367946
+      BossAttackBSendHelp_0: -561107766783046890
+      BossAttackBSendHelp_1: -8784578948928660305
+      BossAttackBSendHelp_2: -1336634710604474849
+      BossAttackBSendHelp_3: -1110059602962194974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

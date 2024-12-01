@@ -78,9 +78,4 @@ public class FreezingSlider : MonoBehaviour
         }
         Player.Instance.Heal(1);
     }
-
-    public void Inside()
-    {
-
-    }
 }
